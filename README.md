@@ -7,7 +7,7 @@ Phenotype Library Diagnostics
 - Study type: **Clinical Application**
 - Tags: **-**
 - Study lead: **Gowtham Rao**
-- Study lead forums tag: **[[gowtham_rao]](https://forums.ohdsi.org/u/gowtham_rao)**
+- Study lead forums tag: **[gowtham_rao](https://forums.ohdsi.org/u/gowtham_rao)**
 - Study start date: **October 8, 2020**
 - Study end date: **-**
 - Protocol: **-**
