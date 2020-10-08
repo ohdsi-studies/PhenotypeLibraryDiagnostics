@@ -1,0 +1,16 @@
+Package: PhenotypeLibraryDiagnostics
+Type: Package
+Title: Generating Cohort Diagnostics for the OHDSI Phenotype Library
+Version: 0.0.1
+Author: Martijn Schuemie [aut, cre]
+Maintainer: Martijn J. Schuemie <schuemie@ohdsi.org>
+Description: Generating cohort diagnostics for the cohort definitions in the OHDSI Phenotype Library.
+Depends:
+    DatabaseConnector (>= 3.0.0)
+Imports:
+	CohortDiagnostics,
+	OhdsiSharing,
+	ParallelLogger
+License: Apache License 2.0
+LazyData: TRUE
+RoxygenNote: 7.1.1
