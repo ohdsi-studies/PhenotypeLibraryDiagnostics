@@ -30,7 +30,7 @@ There are several ways in which one could install the `PhenotypeLibraryDiagnosti
 
 1. See the instructions [here](https://ohdsi.github.io/Hades/rSetup.html) for configuring your R environment, including Java and RStudio.
 
-2. In RStudio, create a new project. If asked if you want to use `renv` with the project, answer ‘no’.
+2. In RStudio, create a new project: File -> New Project... -> New Directory -> New Project. If asked if you want to use `renv` with the project, answer ‘no’.
 
 3. Execute the following R code:
 
