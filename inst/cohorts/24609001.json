@@ -11,7 +11,7 @@
 			}
 		],
 		"ObservationWindow" : {
-			"PriorDays" : 0,
+			"PriorDays" : 365,
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
@@ -21,18 +21,18 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "Dermatomyositis",
+			"name" : "Hypoglycemia",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 80182,
-							"CONCEPT_NAME" : "Dermatomyositis",
+							"CONCEPT_ID" : 24609,
+							"CONCEPT_NAME" : "Hypoglycemia",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "396230008",
+							"CONCEPT_CODE" : "302866003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"

@@ -4,7 +4,7 @@
 		"CriteriaList" : [
 			{
 				"ConditionOccurrence" : {
-					"CodesetId" : 0,
+					"CodesetId" : 1,
 					"First" : true,
 					"ConditionTypeExclude" : false
 				}
@@ -20,19 +20,19 @@
 	},
 	"ConceptSets" : [
 		{
-			"id" : 0,
-			"name" : "Eosinophilic esophagitis",
+			"id" : 1,
+			"name" : "Hypoglycemia and hypoglycemic disorder ",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 27918,
-							"CONCEPT_NAME" : "Eosinophilic esophagitis",
+							"CONCEPT_ID" : 30361,
+							"CONCEPT_NAME" : "Hypoglycemic disorder",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "235599003",
+							"CONCEPT_CODE" : "237630007",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"

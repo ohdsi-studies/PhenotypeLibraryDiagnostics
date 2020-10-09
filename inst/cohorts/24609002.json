@@ -21,18 +21,18 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "Eosinophilic esophagitis",
+			"name" : "Hypoglycemia",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 27918,
-							"CONCEPT_NAME" : "Eosinophilic esophagitis",
+							"CONCEPT_ID" : 24609,
+							"CONCEPT_NAME" : "Hypoglycemia",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "235599003",
+							"CONCEPT_CODE" : "302866003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
