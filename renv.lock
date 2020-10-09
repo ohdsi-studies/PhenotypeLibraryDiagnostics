@@ -333,12 +333,6 @@
       "Source": "Repository",
       "Repository": "CRAN"
     },
-    "splines": {
-      "Package": "splines",
-      "Version": "4.0.2",
-      "Source": "Repository",
-      "Repository": "CRAN"
-    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.4.6",
