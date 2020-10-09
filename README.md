@@ -22,7 +22,7 @@ Under development. Do not use.
 
 # Instructions for installing and running the study package
 
-Below are the instructions for installing and then running the package. For your convience, you can also find this code in [extras/CodeTorun.R](extras/CodeTorun.R).
+Below are the instructions for installing and then running the package. For your convience, you can also find this code in [extras/CodeTorun.R](https://github.com/ohdsi-studies/PhenotypeLibraryDiagnostics/blob/master/extras/CodeToRun.R).
 
 ## How to install the study package
 
