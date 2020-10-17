@@ -15,9 +15,6 @@ sftpCd(connection, "phenotypeLibrary")
 files <- sftpLs(connection)
 files
 
-sftpCd(connection, "HERACharacterization")
-sftpCd(connection, "StudyResults")
-
 sftpGetFiles(connection, files$fileName, localFolder = localFolder)
 
 # DANGER!!! Remove files from server:
