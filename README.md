@@ -16,10 +16,6 @@ Phenotype Library Diagnostics
 
 Generating cohort diagnostics for the cohort definitions in the OHDSI Phenotype Library.
 
-# Development status
-
-Under development. Do not use.
-
 # Instructions for installing and running the study package
 
 Below are the instructions for installing and then running the package. For your convience, you can also find this code in [extras/CodeTorun.R](https://github.com/ohdsi-studies/PhenotypeLibraryDiagnostics/blob/master/extras/CodeToRun.R).
@@ -133,3 +129,6 @@ CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostic
 uploadResults(outputFolder, keyFileName, userName)
 ```
 
+# Development status
+
+Ready to run.
