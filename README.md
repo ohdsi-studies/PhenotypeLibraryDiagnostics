@@ -1,7 +1,7 @@
 Phenotype Library Diagnostics
 =============================
 
-<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
+<img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available">
 
 - Analytics use case(s): **Characterization**
 - Study type: **Clinical Application**
@@ -12,7 +12,7 @@ Phenotype Library Diagnostics
 - Study end date: **-**
 - Protocol: **-**
 - Publications: **-**
-- Results explorer: **-**
+- Results explorer: **[Phenotype Library](https://data.ohdsi.org/PhenotypeLibrary/)**
 
 Generating cohort diagnostics for the cohort definitions in the OHDSI Phenotype Library.
 
