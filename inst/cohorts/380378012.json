@@ -5,34 +5,33 @@
 			{
 				"ConditionOccurrence" : {
 					"CodesetId" : 0,
-					"First" : true,
 					"ConditionTypeExclude" : false
 				}
 			}
 		],
 		"ObservationWindow" : {
-			"PriorDays" : 365,
+			"PriorDays" : 0,
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
-			"Type" : "First"
+			"Type" : "All"
 		}
 	},
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "Heart disease",
+			"name" : "Seizure",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 321588,
-							"CONCEPT_NAME" : "Heart disease",
+							"CONCEPT_ID" : 4196708,
+							"CONCEPT_NAME" : "Seizure related finding",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "56265001",
+							"CONCEPT_CODE" : "313287004",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -46,12 +45,35 @@
 		}
 	],
 	"QualifiedLimit" : {
-		"Type" : "First"
+		"Type" : "All"
 	},
 	"ExpressionLimit" : {
-		"Type" : "First"
+		"Type" : "All"
 	},
-	"InclusionRules" : [],
+	"InclusionRules" : [
+		{
+			"name" : "ages <=2",
+			"expression" : {
+				"Type" : "ALL",
+				"CriteriaList" : [],
+				"DemographicCriteriaList" : [
+					{
+						"Age" : {
+							"Value" : 2,
+							"Op" : "lte"
+						}
+					}
+				],
+				"Groups" : []
+			}
+		}
+	],
+	"EndStrategy" : {
+		"DateOffset" : {
+			"DateField" : "StartDate",
+			"Offset" : 42
+		}
+	},
 	"CensoringCriteria" : [],
 	"CollapseSettings" : {
 		"CollapseType" : "ERA",
