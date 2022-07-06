@@ -14,3 +14,9 @@ OhdsiRTools::createRenvLockFile(rootPackage = "PhenotypeLibraryDiagnostics",
                                 mode = "description",
                                 ohdsiGitHubPackages = unique(c(OhdsiRTools::getOhdsiGitHubPackages())),
                                 includeRootPackage = FALSE)
+
+# To do
+# read the version of ohdsi/PhenotypeLibrary in main
+# match the version of this package to match PhenotypeLibrary
+# update renv to point to latest version of PhenotypeLibrary
+# update Description to point to latest version of PhenotypeLibrary
