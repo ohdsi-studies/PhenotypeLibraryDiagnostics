@@ -1,7 +1,7 @@
 # Code to be used  by the package maintainer.
-
+library(magrittr)
 # Format and check code ---------------------------------------------------------------------
-OhdsiRTools::formatRFolder()
+styler::style_pkg()
 OhdsiRTools::checkUsagePackage("PhenotypeLibraryDiagnostics")
 OhdsiRTools::updateCopyrightYearFolder()
 
@@ -9,9 +9,8 @@ OhdsiRTools::updateCopyrightYearFolder()
 shell("rm extras/PhenotypeLibraryDiagnostics.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/PhenotypeLibraryDiagnostics.pdf")
 
-# Import phenotype and cohort definitions from Phenotype Library ----------------------------
-source("extras/ImportFromPhenotypeLibrary.R")
-importFromPhenotypeLibrary("../PhenotypeLibrary")
-
-# Store R environment details in RENV lock file ---------------------------------------------------
-OhdsiRTools::createRenvLockFile("PhenotypeLibraryDiagnostics")
+# Store environment in which the study was executed -----------------------
+OhdsiRTools::createRenvLockFile(rootPackage = "PhenotypeLibraryDiagnostics",
+                                mode = "description",
+                                ohdsiGitHubPackages = unique(c(OhdsiRTools::getOhdsiGitHubPackages())),
+                                includeRootPackage = FALSE)
