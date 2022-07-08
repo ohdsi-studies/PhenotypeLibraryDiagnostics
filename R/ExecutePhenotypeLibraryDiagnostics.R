@@ -99,14 +99,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
   )
 
   # get cohort definitions from study package
-  cohortDefinitionSet <-
-    CohortGenerator::getCohortDefinitionSet(
-      settingsFileName = "settings/CohortsToCreate.csv",
-      jsonFolder = "cohorts",
-      sqlFolder = "sql/sql_server",
-      packageName = "PhenotypeLibrary",
-      cohortFileNameValue = "cohortId"
-    ) %>% dplyr::tibble()
+  cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(PhenotypeLibrary::listPhenotypes()$cohortId)
 
   # Generate the cohort set
   CohortGenerator::generateCohortSet(
