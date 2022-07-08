@@ -1,4 +1,4 @@
-# Copyright 2020 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of PhenotypeLibraryDiagnostics
 #
@@ -15,28 +15,30 @@
 # limitations under the License.
 
 #' Upload results to OHDSI server
-#' 
-#' @details 
+#'
+#' @details
 #' This function uploads the 'AllResults_<databaseId>.zip' to the OHDSI SFTP server. Before sending, you can inspect the zip file,
 #' wich contains (zipped) CSV files. You can send the zip file from a different computer than the one on which is was created.
-#' 
+#'
 #' @param privateKeyFileName   A character string denoting the path to the RSA private key provided by the study coordinator.
 #' @param userName             A character string containing the user name provided by the study coordinator.
 #' @param outputFolder         Name of local folder where the results were generated; make sure to use forward slashes
-#'                             (/). 
-#'                             
+#'                             (/).
+#'
 #' @export
 uploadResults <- function(outputFolder, privateKeyFileName, userName) {
   fileName <- list.files(file.path(outputFolder, "diagnosticsExport"), "^Results_.*.zip$", full.names = TRUE)
   if (length(fileName) == 0) {
-    stop("Could not find results file in folder. Did you run (and complete) execute?") 
+    stop("Could not find results file in folder. Did you run (and complete) execute?")
   }
   if (length(fileName) == 0) {
-    stop("Multiple results files found. Don't know which one to upload.") 
+    stop("Multiple results files found. Don't know which one to upload.")
   }
-  OhdsiSharing::sftpUploadFile(privateKeyFileName = privateKeyFileName, 
-                               userName = userName,
-                               remoteFolder = "phenotypeLibrary",
-                               fileName = fileName)
+  OhdsiSharing::sftpUploadFile(
+    privateKeyFileName = privateKeyFileName,
+    userName = userName,
+    remoteFolder = "phenotypeLibrary",
+    fileName = fileName
+  )
   ParallelLogger::logInfo("Finished uploading")
 }
