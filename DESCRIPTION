@@ -1,8 +1,8 @@
 Package: PhenotypeLibraryDiagnostics
 Type: Package
 Title: Generating Cohort Diagnostics for the OHDSI Phenotype Library
-Version: 3.1.0
-Date: 2022-07-06
+Version: 3.1.1
+Date: 2022-07-07
 Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
 Description: Generating cohort diagnostics for the cohort definitions in the OHDSI Phenotype Library.
@@ -13,7 +13,7 @@ Imports:
 	CohortGenerator (>= 0.5.0),
 	OhdsiSharing,
 	ParallelLogger,
-	PhenotypeLibrary (>= 3.1.0)
+  PhenotypeLibrary (>= 3.1.1)
 License: Apache License 2.0
 LazyData: TRUE
 RoxygenNote: 7.2.0
