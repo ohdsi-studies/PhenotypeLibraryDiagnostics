@@ -14,6 +14,10 @@ Imports:
 	OhdsiSharing,
 	ParallelLogger,
   PhenotypeLibrary (>= 3.1.1)
+Remotes:
+  ohdsi/PhenotypeLibrary,
+  ohdsi/CohortGenerator,
+  ohdsi/CohortDiagnostics
 License: Apache License 2.0
 LazyData: TRUE
 RoxygenNote: 7.2.0
