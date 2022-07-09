@@ -99,7 +99,12 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
   )
 
   # get cohort definitions from study package
-  cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(PhenotypeLibrary::listPhenotypes()$cohortId)
+  cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(PhenotypeLibrary::listPhenotypes()$cohortId) %>%
+    dplyr::filter(.data$cohortId %in%
+      PhenotypeLibrary::getPhenotypeLog() %>%
+      dplyr::filter(.data$getResults == "Yes") %>%
+      dplyr::filter(is.na(.data$deprecatedVersion)) %>%
+      dplyr::filter(is.na(.data$deprecatedDate)))
 
   # Generate the cohort set
   CohortGenerator::generateCohortSet(
