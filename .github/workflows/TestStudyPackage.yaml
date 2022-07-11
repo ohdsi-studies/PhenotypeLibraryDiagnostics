@@ -9,7 +9,7 @@ on:
 name: Test-study-package
 
 jobs:
-  Test-module:
+  Test-study-package:
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
