@@ -2,3 +2,6 @@
 
 export(executePhenotyeLibraryDiagnostics)
 export(uploadResults)
+import(DatabaseConnector)
+import(dplyr)
+importFrom(rlang,.data)
