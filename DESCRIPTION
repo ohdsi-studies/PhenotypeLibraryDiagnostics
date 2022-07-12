@@ -2,7 +2,7 @@ Package: PhenotypeLibraryDiagnostics
 Type: Package
 Title: Generating Cohort Diagnostics for the OHDSI Phenotype Library
 Version: 3.1.2
-Date: 2022-07-09
+Date: 2022-07-12
 Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
 Description: Generating cohort diagnostics for the cohort definitions in the OHDSI Phenotype Library.
