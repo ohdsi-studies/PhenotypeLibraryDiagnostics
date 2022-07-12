@@ -261,21 +261,9 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"ps" : {
-			"Package" : "ps",
-			"Version" : "1.7.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"readr" : {
 			"Package" : "readr",
 			"Version" : "2.1.2",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"rprojroot" : {
-			"Package" : "rprojroot",
-			"Version" : "2.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -339,27 +327,9 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"desc" : {
-			"Package" : "desc",
-			"Version" : "1.4.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"diffobj" : {
-			"Package" : "diffobj",
-			"Version" : "0.3.5",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"digest" : {
 			"Package" : "digest",
 			"Version" : "0.6.29",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"fs" : {
-			"Package" : "fs",
-			"Version" : "1.5.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -375,6 +345,54 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"RJSONIO" : {
+			"Package" : "RJSONIO",
+			"Version" : "1.3-1.6",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"clock" : {
+			"Package" : "clock",
+			"Version" : "0.6.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"tidyr" : {
+			"Package" : "tidyr",
+			"Version" : "1.2.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"ps" : {
+			"Package" : "ps",
+			"Version" : "1.7.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"rprojroot" : {
+			"Package" : "rprojroot",
+			"Version" : "2.0.3",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"desc" : {
+			"Package" : "desc",
+			"Version" : "1.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"diffobj" : {
+			"Package" : "diffobj",
+			"Version" : "0.3.5",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"fs" : {
+			"Package" : "fs",
+			"Version" : "1.5.2",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"processx" : {
 			"Package" : "processx",
 			"Version" : "3.7.0",
@@ -387,12 +405,6 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"RJSONIO" : {
-			"Package" : "RJSONIO",
-			"Version" : "1.3-1.6",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"brio" : {
 			"Package" : "brio",
 			"Version" : "1.1.3",
@@ -402,12 +414,6 @@
 		"callr" : {
 			"Package" : "callr",
 			"Version" : "3.7.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"clock" : {
-			"Package" : "clock",
-			"Version" : "0.6.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -426,12 +432,6 @@
 		"praise" : {
 			"Package" : "praise",
 			"Version" : "1.0.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"tidyr" : {
-			"Package" : "tidyr",
-			"Version" : "1.2.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -483,16 +483,6 @@
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v3.0.2"
 		},
-		"Eunomia" : {
-			"Package" : "Eunomia",
-			"Version" : "1.0.2",
-			"Source" : "GitHub",
-			"RemoteType" : "github",
-			"RemoteHost" : "api.github.com",
-			"RemoteRepo" : "Eunomia",
-			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v1.0.2"
-		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
 			"Version" : "0.2.2",
@@ -512,6 +502,16 @@
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v3.1.2"
+		},
+		"Eunomia" : {
+			"Package" : "Eunomia",
+			"Version" : "1.0.2",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "Eunomia",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v1.0.2"
 		}
 	}
 }

@@ -15,12 +15,12 @@ Imports:
   FeatureExtraction,
   jsonlite,
   OhdsiSharing,
-  utils,
   ParallelLogger,
   PhenotypeLibrary (>= 3.1.2)
+  rlang,
+  utils
 Suggests:
   Eunomia,
-  rlang,
   testthat
 Remotes:
   ohdsi/CohortGenerator,
