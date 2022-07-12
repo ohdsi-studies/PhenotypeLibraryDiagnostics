@@ -11,16 +11,18 @@ Depends:
 Imports:
 	CohortDiagnostics (>= 3.0.2),
 	CohortGenerator (>= 0.5.0),
-	OhdsiSharing,
-	ParallelLogger,
-  PhenotypeLibrary (>= 3.1.2),
-  FeatureExtraction,
   dplyr,
-  rlang
+	FeatureExtraction,
+	OhdsiSharing,
+  rlang,
+	ParallelLogger,
+  PhenotypeLibrary (>= 3.1.2)
 Remotes:
-  ohdsi/PhenotypeLibrary,
   ohdsi/CohortGenerator,
-  ohdsi/CohortDiagnostics
+  ohdsi/CohortDiagnostics,
+  ohdsi/Eunomia,
+  ohdsi/FeatureExtraction,
+  ohdsi/PhenotypeLibrary
 License: Apache License 2.0
 LazyData: TRUE
 RoxygenNote: 7.2.0
