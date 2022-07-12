@@ -9,16 +9,15 @@ Description: Generating cohort diagnostics for the cohort definitions in the OHD
 Depends:
     DatabaseConnector (>= 5.0.0)
 Imports:
-	CohortDiagnostics (>= 3.0.2),
-	CohortGenerator (>= 0.5.0),
+  CohortDiagnostics (>= 3.0.2),
+  CohortGenerator (>= 0.5.0),
   dplyr,
-	FeatureExtraction,
-	OhdsiSharing,
+  FeatureExtraction,
+  OhdsiSharing,
   rlang,
-	ParallelLogger,
+  testthat,
+  ParallelLogger,
   PhenotypeLibrary (>= 3.1.2)
-Suggests:  
-  testthat
 Remotes:
   ohdsi/CohortGenerator,
   ohdsi/CohortDiagnostics,
