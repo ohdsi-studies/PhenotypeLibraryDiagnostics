@@ -12,15 +12,16 @@ Imports:
   CohortDiagnostics (>= 3.0.2),
   CohortGenerator (>= 0.5.0),
   dplyr,
-  Eunomia,
   FeatureExtraction,
   jsonlite,
   OhdsiSharing,
-  rlang,
-  testthat,
   utils,
   ParallelLogger,
   PhenotypeLibrary (>= 3.1.2)
+Suggests:
+  Eunomia,
+  rlang,
+  testthat
 Remotes:
   ohdsi/CohortGenerator,
   ohdsi/CohortDiagnostics,
@@ -29,4 +30,5 @@ Remotes:
   ohdsi/PhenotypeLibrary
 License: Apache License 2.0
 LazyData: TRUE
+Encoding: UTF-8
 RoxygenNote: 7.2.0
