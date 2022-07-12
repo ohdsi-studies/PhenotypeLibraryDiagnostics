@@ -483,6 +483,16 @@
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v3.0.2"
 		},
+		"Eunomia" : {
+			"Package" : "Eunomia",
+			"Version" : "1.0.2",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "Eunomia",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v1.0.2"
+		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
 			"Version" : "0.2.2",

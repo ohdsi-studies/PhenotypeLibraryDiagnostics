@@ -12,6 +12,7 @@ Imports:
   CohortDiagnostics (>= 3.0.2),
   CohortGenerator (>= 0.5.0),
   dplyr,
+  Eunomia,
   FeatureExtraction,
   jsonlite,
   OhdsiSharing,
