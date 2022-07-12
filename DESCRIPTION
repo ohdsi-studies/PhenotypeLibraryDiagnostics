@@ -17,6 +17,8 @@ Imports:
   rlang,
 	ParallelLogger,
   PhenotypeLibrary (>= 3.1.2)
+Suggests:  
+  testthat
 Remotes:
   ohdsi/CohortGenerator,
   ohdsi/CohortDiagnostics,
