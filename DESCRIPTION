@@ -13,9 +13,11 @@ Imports:
   CohortGenerator (>= 0.5.0),
   dplyr,
   FeatureExtraction,
+  jsonlite,
   OhdsiSharing,
   rlang,
   testthat,
+  utils,
   ParallelLogger,
   PhenotypeLibrary (>= 3.1.2)
 Remotes:
