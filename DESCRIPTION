@@ -16,10 +16,7 @@ Imports:
 	OhdsiSharing,
   rlang,
 	ParallelLogger,
-  PhenotypeLibrary (>= 3.1.2),
-  FeatureExtraction,
-  dplyr,
-  rlang
+  PhenotypeLibrary (>= 3.1.2)
 Remotes:
   ohdsi/CohortGenerator,
   ohdsi/CohortDiagnostics,
