@@ -18,9 +18,9 @@ verifyDependencies <- function() {
   lockFile <- file.path(renv::project(), "renv.lock")
   expected <- jsonlite::fromJSON(lockFile)
   expected <- dplyr::bind_rows(expected[[2]])
-  basePackages <- rownames(installed.packages(priority = "base"))
+  basePackages <- rownames(utils::installed.packages(priority = "base"))
   expected <- expected[!expected$Package %in% basePackages, ]
-  observedVersions <- sapply(sapply(expected$Package, packageVersion), paste, collapse = ".")
+  observedVersions <- sapply(sapply(expected$Package, utils::packageVersion), paste, collapse = ".")
   expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
   mismatchIdx <- which(observedVersions != expectedVersions)
   if (length(mismatchIdx) > 0) {

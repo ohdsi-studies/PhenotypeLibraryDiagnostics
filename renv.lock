@@ -363,6 +363,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"renv" : {
+			"Package" : "renv",
+			"Version" : "0.15.5",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"ps" : {
 			"Package" : "ps",
 			"Version" : "1.7.1",

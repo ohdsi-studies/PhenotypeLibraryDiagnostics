@@ -16,6 +16,7 @@ Imports:
   jsonlite,
   OhdsiSharing,
   ParallelLogger,
+  renv,
   rlang,
   utils,
   PhenotypeLibrary (>= 3.1.2)
