@@ -123,6 +123,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"backports" : {
+			"Package" : "backports",
+			"Version" : "1.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"bit64" : {
 			"Package" : "bit64",
 			"Version" : "4.0.5",
@@ -149,7 +155,7 @@
 		},
 		"Rcpp" : {
 			"Package" : "Rcpp",
-			"Version" : "1.0.8.3",
+			"Version" : "1.0.9",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -186,6 +192,12 @@
 		"blob" : {
 			"Package" : "blob",
 			"Version" : "1.2.3",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"checkmate" : {
+			"Package" : "checkmate",
+			"Version" : "2.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -227,7 +239,7 @@
 		},
 		"stringi" : {
 			"Package" : "stringi",
-			"Version" : "1.7.6",
+			"Version" : "1.7.8",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -240,12 +252,6 @@
 		"vroom" : {
 			"Package" : "vroom",
 			"Version" : "1.5.7",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"backports" : {
-			"Package" : "backports",
-			"Version" : "1.4.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -281,7 +287,7 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.9.1",
+			"Version" : "1.9.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -312,12 +318,6 @@
 		"Andromeda" : {
 			"Package" : "Andromeda",
 			"Version" : "0.6.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"checkmate" : {
-			"Package" : "checkmate",
-			"Version" : "2.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -455,13 +455,13 @@
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
-			"Version" : "0.5.0",
+			"Version" : "0.6.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.5.0"
+			"RemoteRef" : "v0.6.0"
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
@@ -512,6 +512,16 @@
 			"RemoteRepo" : "Eunomia",
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.0.2"
+		},
+		"PhenotypeLibraryDiagnostics" : {
+			"Package" : "PhenotypeLibraryDiagnostics",
+			"Version" : "3.1.2",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "PhenotypeLibraryDiagnostics",
+			"RemoteUsername" : "ohdsi-studies",
+			"RemoteRef" : "main"
 		}
 	}
 }
