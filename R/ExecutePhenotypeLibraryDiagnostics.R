@@ -69,9 +69,8 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
                                               databaseId = "Unknown",
                                               databaseName = databaseId,
                                               databaseDescription = databaseId) {
-  
   options("CohortDiagnostics-FE-batch-size" = 1)
-  
+
   if (!file.exists(outputFolder)) {
     dir.create(outputFolder, recursive = TRUE)
   }
