@@ -223,12 +223,4 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     incremental = TRUE,
     incrementalFolder = incrementalFolder
   )
-
-  # drop cohort stats table
-  CohortGenerator::dropCohortStatsTables(
-    connectionDetails = connectionDetails,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    cohortTableNames = cohortTableNames,
-    connection = NULL
-  )
 }
