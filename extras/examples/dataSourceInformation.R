@@ -37,7 +37,7 @@ executeOnMultipleDataSources <- function(x) {
     verifyDependencies = x$verifyDependencies,
     outputFolder = x$outputFolder,
     databaseId = databaseId,
-    databaseName = dataSourceDetails$cdmSourceName,
-    databaseDescription = dataSourceDetails$sourceDescription
+    databaseName = databaseName,
+    databaseDescription = databaseDescription
   )
 }
