@@ -480,8 +480,8 @@
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
-			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.0.3"
+			"RemoteUsername" : "gowthamrao",
+			"RemoteRef" : "develop"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
@@ -495,13 +495,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.1.4",
+			"Version" : "3.1.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.4"
+			"RemoteRef" : "v3.1.6"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
