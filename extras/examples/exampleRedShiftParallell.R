@@ -37,7 +37,9 @@ databaseIds <-
     'truven_mdcr',
     'ims_australia_lpd',
     'ims_germany',
-    'ims_france')
+    'ims_france',
+    'iqvia_amb_emr',
+    'iqvia_pharmetrics_plus')
 
 ## service name for keyring for db with cdm
 keyringUserService <- 'OHDSI_USER'
