@@ -23,18 +23,21 @@ options(andromedaTempFolder = file.path(outputFolder, "andromedaTemp"))
 # lets get meta information for each of these databaseId. This includes connection information.
 source("extras/examples/dataSourceInformation.R")
 
-cdmSources <- cdmSources2
-rm("cdmSources2")
+# cdmSources <- cdmSources2
+# rm("cdmSources2")
 ############## databaseIds to run cohort diagnostics on that source  #################
 databaseIds <-
   c(
-    
-    
-    
-    'optum_extended_dod',
+    'truven_ccae',
     'truven_mdcd',
+    'cprd',
     'jmdc',
+    'optum_extended_dod',
     'optum_ehr',
+    'truven_mdcr',
+    'ims_australia_lpd',
+    'ims_germany',
+    'ims_france',
     'iqvia_amb_emr',
     'iqvia_pharmetrics_plus')
 
