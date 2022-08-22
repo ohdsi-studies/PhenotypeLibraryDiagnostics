@@ -23,7 +23,7 @@
 		},
 		"rlang" : {
 			"Package" : "rlang",
-			"Version" : "1.0.3",
+			"Version" : "1.0.4",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -95,13 +95,13 @@
 		},
 		"hms" : {
 			"Package" : "hms",
-			"Version" : "1.1.1",
+			"Version" : "1.1.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"pillar" : {
 			"Package" : "pillar",
-			"Version" : "1.8.0",
+			"Version" : "1.8.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -161,7 +161,7 @@
 		},
 		"tibble" : {
 			"Package" : "tibble",
-			"Version" : "3.1.7",
+			"Version" : "3.1.8",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -275,7 +275,7 @@
 		},
 		"RSQLite" : {
 			"Package" : "RSQLite",
-			"Version" : "2.2.15",
+			"Version" : "2.2.16",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -293,7 +293,7 @@
 		},
 		"stringr" : {
 			"Package" : "stringr",
-			"Version" : "1.4.0",
+			"Version" : "1.4.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -461,7 +461,7 @@
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.6.0"
+			"RemoteRef" : "saveIncrementalIssue"
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
@@ -475,13 +475,13 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "3.0.3",
+			"Version" : "3.1.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
-			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.0.3"
+			"RemoteUsername" : "gowthamrao",
+			"RemoteRef" : "execute"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
@@ -495,13 +495,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.1.4",
+			"Version" : "3.1.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.4"
+			"RemoteRef" : "v3.1.6"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
@@ -515,7 +515,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.1.4",
+			"Version" : "3.1.6",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
