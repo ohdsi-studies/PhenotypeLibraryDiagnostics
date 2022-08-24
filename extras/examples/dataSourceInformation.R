@@ -4,26 +4,41 @@ source(Sys.getenv("startUpScriptLocation"))
 executeOnMultipleDataSources <- function(x) {
   library(magrittr)
   if (x$generateCohortTableName) {
-    cohortTableName <- paste0(stringr::str_squish("_pl"),
+    cohortTableName <- paste0(stringr::str_squish("pl_"),
                               stringr::str_squish(x$databaseId))
   }
   
-  # this function gets details of the data source from cdm source table in omop, if populated.
-  # The assumption is the cdm_source.sourceDescription has text description of data source.
+  writeLines(
+    paste0(
+      "Running ",
+      cdmSource$sourceName,
+      " on ",
+      cdmSource$runOn,
+      "\n     server: ",
+      cdmSource$runOn,
+      " (",
+      cdmSource$serverFinal,
+      ")",
+      "\n     cdmDatabaseSchema: ",
+      cdmSource$cdmDatabaseSchemaFinal,
+      "\n     cohortDatabaseSchema: ",
+      cdmSource$cohortDatabaseSchemaFinal
+    )
+  )
   
   # Details for connecting to the server:
   connectionDetails <-
     DatabaseConnector::createConnectionDetails(
       dbms = x$cdmSource$dbms,
-      server = x$cdmSource$server,
+      server = x$cdmSource$serverFinal,
       user = keyring::key_get(service = x$userService),
       password =  keyring::key_get(service = x$passwordService),
       port = x$cdmSource$port
     )
   # The name of the database schema where the CDM data can be found:
-  cdmDatabaseSchema <- x$cdmSource$cdmDatabaseSchema
-  vocabDatabaseSchema <- x$cdmSource$vocabDatabaseSchema
-  cohortDatabaseSchema <- x$cdmSource$cohortDatabaseSchema
+  cdmDatabaseSchema <- x$cdmSource$cdmDatabaseSchemaFinal
+  vocabDatabaseSchema <- x$cdmSource$vocabDatabaseSchemaFinal
+  cohortDatabaseSchema <- x$cdmSource$cohortDatabaseSchemaFinal
   
   databaseId <- x$databaseId
   databaseName <- x$databaseName

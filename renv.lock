@@ -413,13 +413,13 @@
 		},
 		"callr" : {
 			"Package" : "callr",
-			"Version" : "3.7.1",
+			"Version" : "3.7.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"evaluate" : {
 			"Package" : "evaluate",
-			"Version" : "0.15",
+			"Version" : "0.16",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -455,13 +455,13 @@
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
-			"Version" : "0.6.0",
+			"Version" : "0.7.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "saveIncrementalIssue"
+			"RemoteRef" : "v0.7.0"
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
@@ -480,8 +480,8 @@
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
-			"RemoteUsername" : "gowthamrao",
-			"RemoteRef" : "execute"
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v3.1.0"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
