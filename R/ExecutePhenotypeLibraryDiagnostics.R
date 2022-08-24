@@ -183,6 +183,8 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       useDrugEraGroupStart = FALSE, # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
       useDrugEraGroupOverlap = TRUE,
       useObservation = TRUE,
+      useVisitCount = TRUE,
+      useVisitConceptCount = TRUE,
       useDeviceExposure = TRUE,
       useCharlsonIndex = TRUE,
       useDcsi = TRUE,
