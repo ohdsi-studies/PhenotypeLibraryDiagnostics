@@ -69,7 +69,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
                                               databaseId = "Unknown",
                                               databaseName = databaseId,
                                               databaseDescription = databaseId) {
-  options("CohortDiagnostics-FE-batch-size" = 1)
+  options("CohortDiagnostics-FE-batch-size" = 5)
 
   if (!file.exists(outputFolder)) {
     dir.create(outputFolder, recursive = TRUE)
@@ -183,6 +183,8 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       useDrugEraGroupStart = FALSE, # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
       useDrugEraGroupOverlap = TRUE,
       useObservation = TRUE,
+      useVisitCount = TRUE,
+      useVisitConceptCount = TRUE,
       useDeviceExposure = TRUE,
       useCharlsonIndex = TRUE,
       useDcsi = TRUE,
@@ -222,13 +224,5 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     minCellCount = 5,
     incremental = TRUE,
     incrementalFolder = incrementalFolder
-  )
-
-  # drop cohort stats table
-  CohortGenerator::dropCohortStatsTables(
-    connectionDetails = connectionDetails,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    cohortTableNames = cohortTableNames,
-    connection = NULL
   )
 }
