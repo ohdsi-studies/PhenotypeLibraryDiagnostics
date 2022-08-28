@@ -162,7 +162,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     runVisitContext = TRUE,
     runBreakdownIndexEvents = TRUE,
     runIncidenceRate = TRUE,
-    runCohortRelationship = FALSE,
+    runCohortRelationship = TRUE,
     runTemporalCohortCharacterization = TRUE,
     temporalCovariateSettings = FeatureExtraction::createTemporalCovariateSettings(
       useDemographicsGender = TRUE,
