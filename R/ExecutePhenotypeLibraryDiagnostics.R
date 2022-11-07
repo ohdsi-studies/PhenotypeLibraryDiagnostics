@@ -89,7 +89,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     ParallelLogger::logInfo("Checking whether correct package versions are installed")
     verifyDependencies()
   }
-  
+
   if (!is.null(extraLog)) {
     ParallelLogger::logInfo(extraLog)
   }
