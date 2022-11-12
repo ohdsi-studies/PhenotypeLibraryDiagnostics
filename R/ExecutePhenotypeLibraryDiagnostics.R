@@ -113,8 +113,6 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     dplyr::filter(.data$cohortId %in%
       c(PhenotypeLibrary::getPhenotypeLog() %>%
         dplyr::filter(.data$getResults == "Yes") %>%
-        dplyr::filter(is.na(.data$deprecatedVersion)) %>%
-        dplyr::filter(is.na(.data$deprecatedDate)) %>%
         dplyr::pull(.data$cohortId)))
 
   # Generate the cohort set
