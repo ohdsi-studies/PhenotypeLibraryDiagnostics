@@ -7,7 +7,7 @@ OhdsiRTools::updateCopyrightYearFolder()
 
 
 # Update Description -----------------------------------------------------------------------------
-remotes::install_github(repo = "OHDSI/PhenotypeLibrary", quiet = TRUE)
+remotes::install_github(repo = "OHDSI/PhenotypeLibrary", ref = 'develop', quiet = TRUE)
 installedVersionOfPhenotypeLibrary <- utils::packageDescription(pkg = "PhenotypeLibrary")$Version
 
 description <- readLines("DESCRIPTION")
