@@ -9,21 +9,27 @@
 		]
 	},
 	"Packages" : {
+		"cli" : {
+			"Package" : "cli",
+			"Version" : "3.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"glue" : {
 			"Package" : "glue",
 			"Version" : "1.6.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"cli" : {
-			"Package" : "cli",
-			"Version" : "3.3.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"rlang" : {
 			"Package" : "rlang",
 			"Version" : "1.0.6",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"lifecycle" : {
+			"Package" : "lifecycle",
+			"Version" : "1.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -35,12 +41,6 @@
 		},
 		"fansi" : {
 			"Package" : "fansi",
-			"Version" : "1.0.3",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"lifecycle" : {
-			"Package" : "lifecycle",
 			"Version" : "1.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
@@ -59,7 +59,7 @@
 		},
 		"vctrs" : {
 			"Package" : "vctrs",
-			"Version" : "0.4.1",
+			"Version" : "0.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -209,7 +209,7 @@
 		},
 		"dplyr" : {
 			"Package" : "dplyr",
-			"Version" : "1.0.9",
+			"Version" : "1.0.10",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -539,7 +539,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.1.4",
+			"Version" : "3.3.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
