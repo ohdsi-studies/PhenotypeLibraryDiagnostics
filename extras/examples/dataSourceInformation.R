@@ -8,21 +8,21 @@ executeOnMultipleDataSources <- function(x) {
                               stringr::str_squish(x$databaseId))
   }
   
-  writeLines(
+  extraLog <- (
     paste0(
       "Running ",
-      cdmSource$sourceName,
+      x$cdmSource$sourceName,
       " on ",
-      cdmSource$runOn,
+      x$cdmSource$runOn,
       "\n     server: ",
-      cdmSource$runOn,
+      x$cdmSource$runOn,
       " (",
-      cdmSource$serverFinal,
+      x$cdmSource$serverFinal,
       ")",
       "\n     cdmDatabaseSchema: ",
-      cdmSource$cdmDatabaseSchemaFinal,
+      x$cdmSource$cdmDatabaseSchemaFinal,
       "\n     cohortDatabaseSchema: ",
-      cdmSource$cohortDatabaseSchemaFinal
+      x$cdmSource$cohortDatabaseSchemaFinal
     )
   )
   
@@ -53,6 +53,7 @@ executeOnMultipleDataSources <- function(x) {
     outputFolder = x$outputFolder,
     databaseId = databaseId,
     databaseName = databaseName,
-    databaseDescription = databaseDescription
+    databaseDescription = databaseDescription,
+    extraLog = extraLog
   )
 }

@@ -55,6 +55,7 @@
 #'                                            run; make sure to use forward slashes (/). Do not use a
 #'                                            folder on a network drive since this greatly impacts
 #'                                            performance.
+#' @param extraLog                            Do you want to add anything extra into the log?
 #'
 #' @export
 executePhenotyeLibraryDiagnostics <- function(connectionDetails,
@@ -68,7 +69,8 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
                                               incrementalFolder = file.path(outputFolder, "incrementalFolder"),
                                               databaseId = "Unknown",
                                               databaseName = databaseId,
-                                              databaseDescription = databaseId) {
+                                              databaseDescription = databaseId,
+                                              extraLog = NULL) {
   options("CohortDiagnostics-FE-batch-size" = 5)
 
   if (!file.exists(outputFolder)) {
@@ -86,6 +88,10 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
   if (verifyDependencies) {
     ParallelLogger::logInfo("Checking whether correct package versions are installed")
     verifyDependencies()
+  }
+
+  if (!is.null(extraLog)) {
+    ParallelLogger::logInfo(extraLog)
   }
 
   ParallelLogger::logInfo("Creating cohorts")
@@ -156,7 +162,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     runVisitContext = TRUE,
     runBreakdownIndexEvents = TRUE,
     runIncidenceRate = TRUE,
-    runCohortRelationship = FALSE,
+    runCohortRelationship = TRUE,
     runTemporalCohortCharacterization = TRUE,
     temporalCovariateSettings = FeatureExtraction::createTemporalCovariateSettings(
       useDemographicsGender = TRUE,

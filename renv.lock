@@ -9,21 +9,27 @@
 		]
 	},
 	"Packages" : {
+		"cli" : {
+			"Package" : "cli",
+			"Version" : "3.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"glue" : {
 			"Package" : "glue",
 			"Version" : "1.6.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"cli" : {
-			"Package" : "cli",
-			"Version" : "3.3.0",
+		"rlang" : {
+			"Package" : "rlang",
+			"Version" : "1.0.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"rlang" : {
-			"Package" : "rlang",
-			"Version" : "1.0.4",
+		"lifecycle" : {
+			"Package" : "lifecycle",
+			"Version" : "1.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -36,18 +42,6 @@
 		"fansi" : {
 			"Package" : "fansi",
 			"Version" : "1.0.3",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"lifecycle" : {
-			"Package" : "lifecycle",
-			"Version" : "1.0.1",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"magrittr" : {
-			"Package" : "magrittr",
-			"Version" : "2.0.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -65,7 +59,7 @@
 		},
 		"vctrs" : {
 			"Package" : "vctrs",
-			"Version" : "0.4.1",
+			"Version" : "0.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -77,13 +71,13 @@
 		},
 		"cpp11" : {
 			"Package" : "cpp11",
-			"Version" : "0.4.2",
+			"Version" : "0.4.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"crayon" : {
 			"Package" : "crayon",
-			"Version" : "1.5.1",
+			"Version" : "1.5.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -99,6 +93,12 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"magrittr" : {
+			"Package" : "magrittr",
+			"Version" : "2.0.3",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"pillar" : {
 			"Package" : "pillar",
 			"Version" : "1.8.1",
@@ -111,15 +111,15 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"purrr" : {
-			"Package" : "purrr",
-			"Version" : "0.3.4",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"R6" : {
 			"Package" : "R6",
 			"Version" : "2.5.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"withr" : {
+			"Package" : "withr",
+			"Version" : "2.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -167,19 +167,13 @@
 		},
 		"tidyselect" : {
 			"Package" : "tidyselect",
-			"Version" : "1.1.2",
+			"Version" : "1.2.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"tzdb" : {
 			"Package" : "tzdb",
 			"Version" : "0.3.0",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"withr" : {
-			"Package" : "withr",
-			"Version" : "2.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -215,7 +209,7 @@
 		},
 		"dplyr" : {
 			"Package" : "dplyr",
-			"Version" : "1.0.9",
+			"Version" : "1.0.10",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -228,6 +222,12 @@
 		"plogr" : {
 			"Package" : "plogr",
 			"Version" : "0.2.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"purrr" : {
+			"Package" : "purrr",
+			"Version" : "0.3.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -251,7 +251,7 @@
 		},
 		"vroom" : {
 			"Package" : "vroom",
-			"Version" : "1.5.7",
+			"Version" : "1.6.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -261,21 +261,33 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"digest" : {
+			"Package" : "digest",
+			"Version" : "0.6.30",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"jsonlite" : {
 			"Package" : "jsonlite",
-			"Version" : "1.8.0",
+			"Version" : "1.8.3",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"later" : {
+			"Package" : "later",
+			"Version" : "1.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"readr" : {
 			"Package" : "readr",
-			"Version" : "2.1.2",
+			"Version" : "2.1.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"RSQLite" : {
 			"Package" : "RSQLite",
-			"Version" : "2.2.16",
+			"Version" : "2.2.18",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -287,13 +299,19 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.9.2",
+			"Version" : "1.10.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"stringr" : {
 			"Package" : "stringr",
 			"Version" : "1.4.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"timechange" : {
+			"Package" : "timechange",
+			"Version" : "0.1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -311,7 +329,7 @@
 		},
 		"zip" : {
 			"Package" : "zip",
-			"Version" : "2.2.0",
+			"Version" : "2.2.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -323,25 +341,25 @@
 		},
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
-			"Version" : "5.0.4",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
-		"digest" : {
-			"Package" : "digest",
-			"Version" : "0.6.29",
+			"Version" : "5.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"lubridate" : {
 			"Package" : "lubridate",
-			"Version" : "1.8.0",
+			"Version" : "1.9.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"ParallelLogger" : {
 			"Package" : "ParallelLogger",
 			"Version" : "3.0.1",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"pool" : {
+			"Package" : "pool",
+			"Version" : "0.1.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -357,15 +375,21 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"ResultModelManager" : {
+			"Package" : "ResultModelManager",
+			"Version" : "0.1.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"tidyr" : {
 			"Package" : "tidyr",
-			"Version" : "1.2.0",
+			"Version" : "1.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"ps" : {
 			"Package" : "ps",
-			"Version" : "1.7.1",
+			"Version" : "1.7.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -377,7 +401,7 @@
 		},
 		"desc" : {
 			"Package" : "desc",
-			"Version" : "1.4.1",
+			"Version" : "1.4.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -395,7 +419,7 @@
 		},
 		"processx" : {
 			"Package" : "processx",
-			"Version" : "3.7.0",
+			"Version" : "3.8.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -413,19 +437,19 @@
 		},
 		"callr" : {
 			"Package" : "callr",
-			"Version" : "3.7.2",
+			"Version" : "3.7.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"evaluate" : {
 			"Package" : "evaluate",
-			"Version" : "0.16",
+			"Version" : "0.18",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"pkgload" : {
 			"Package" : "pkgload",
-			"Version" : "1.3.0",
+			"Version" : "1.3.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -443,13 +467,13 @@
 		},
 		"testthat" : {
 			"Package" : "testthat",
-			"Version" : "3.1.4",
+			"Version" : "3.1.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"renv" : {
 			"Package" : "renv",
-			"Version" : "0.15.5",
+			"Version" : "0.16.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -495,13 +519,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.1.6",
+			"Version" : "3.3.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.6"
+			"RemoteRef" : "v3.3.0"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
@@ -515,7 +539,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.1.6",
+			"Version" : "3.3.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
