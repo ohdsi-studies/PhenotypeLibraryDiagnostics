@@ -99,7 +99,7 @@ for (i in (1:length(tablesInResultsDataModel))) {
   )
 }
 
-CohortDiagnostics::createResultsDataModel(connectionDetails = connectionDetails, schema = resultsSchema)
+CohortDiagnostics::createResultsDataModel(connectionDetails = connectionDetails, databaseSchema = resultsSchema)
 
 sqlGrant <-
   "grant select on all tables in schema @results_database_schema to phenotypelibrary;"
