@@ -519,13 +519,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.3.0",
+			"Version" : "3.4.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.3.0"
+			"RemoteRef" : "v3.4.0"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
