@@ -56,8 +56,8 @@ for (i in (1:length(databaseIds))) {
     cdmSource = cdmSource,
     generateCohortTableName = TRUE,
     verifyDependencies = FALSE,
-    databaseId = databaseIds[[i]],
-    outputFolder = file.path(outputFolder, databaseIds[[i]]),
+    databaseId = cdmSource$sourceKey,
+    outputFolder = file.path(outputFolder, cdmSource$sourceKey),
     userService = keyringUserService,
     passwordService = keyringPasswordService,
     preMergeDiagnosticsFiles = TRUE

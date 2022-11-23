@@ -48,6 +48,8 @@
 #'                                            drive since this greatly impacts performance.
 #' @param databaseId                          A short string for identifying the database (e.g.
 #'                                            'Synpuf').
+#' @param cohortIds                           An optional parameter to filter the cohortIds in OHDSI Phenotype library to run.
+#'                                            By Default all cohorts will be run.
 #' @param databaseName                        The full name of the database (e.g. 'Medicare Claims
 #'                                            Synthetic Public Use Files (SynPUFs)').
 #' @param databaseDescription                 A short description (several sentences) of the database.
@@ -66,6 +68,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
                                               tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                                               verifyDependencies = TRUE,
                                               outputFolder,
+                                              cohortIds = NULL,
                                               incrementalFolder = file.path(outputFolder, "incrementalFolder"),
                                               databaseId = "Unknown",
                                               databaseName = databaseId,
@@ -109,11 +112,10 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
   # get cohort definitions from study package
   cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(PhenotypeLibrary::listPhenotypes()$cohortId)
 
-  cohortDefinitionSet <- cohortDefinitionSet %>%
-    dplyr::filter(.data$cohortId %in%
-      c(PhenotypeLibrary::getPhenotypeLog() %>%
-        dplyr::filter(.data$getResults == "Yes") %>%
-        dplyr::pull(.data$cohortId)))
+  if (!is.null(cohortIds)) {
+    cohortDefinitionSet <- cohortDefinitionSet %>%
+      dplyr::filter(cohortId %in% c(cohortIds))
+  }
 
   # Generate the cohort set
   CohortGenerator::generateCohortSet(
