@@ -57,7 +57,7 @@ can be created.}
 forward slashes (/). Do not use a folder on a network
 drive since this greatly impacts performance.}
 
-\item{cohortIds}{An optional parameter to filter the cohortIds in OHDSI Phenotype library to run. 
+\item{cohortIds}{An optional parameter to filter the cohortIds in OHDSI Phenotype library to run.
 By Default all cohorts will be run.}
 
 \item{incrementalFolder}{Name of local folder to hold the logs for incremental

@@ -1,5 +1,5 @@
-remotes::install_github("gowthamrao/DatabaseConnector", ref = "characterEncodingIssueWhileGuessingSqlDataTypes")
-remotes::install_github("gowthamrao/CohortDiagnostics", ref = "execute")
+install.packages("DatabaseConnector")
+remotes::install_github("ohdsi/CohortDiagnostics", ref = "develop")
 
 # where are the cohort diagnostics output?
 folderWithZipFilesToUpload <- "D:\\studyResults\\PhenotypeLibraryDiagnostics\\"
