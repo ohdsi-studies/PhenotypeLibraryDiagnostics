@@ -261,12 +261,6 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
-		"digest" : {
-			"Package" : "digest",
-			"Version" : "0.6.30",
-			"Source" : "Repository",
-			"Repository" : "CRAN"
-		},
 		"jsonlite" : {
 			"Package" : "jsonlite",
 			"Version" : "1.8.3",
@@ -342,6 +336,12 @@
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
 			"Version" : "5.1.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"digest" : {
+			"Package" : "digest",
+			"Version" : "0.6.30",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -519,13 +519,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.4.0",
+			"Version" : "3.5.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.4.0"
+			"RemoteRef" : "v3.5.0"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
@@ -539,7 +539,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.3.0",
+			"Version" : "3.4.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
