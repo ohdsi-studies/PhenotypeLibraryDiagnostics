@@ -299,7 +299,7 @@
 		},
 		"stringr" : {
 			"Package" : "stringr",
-			"Version" : "1.4.1",
+			"Version" : "1.5.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -499,13 +499,13 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "3.1.0",
+			"Version" : "3.1.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.1.0"
+			"RemoteRef" : "v3.1.1"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
@@ -519,13 +519,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.7.0",
+			"Version" : "3.8.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.7.0"
+			"RemoteRef" : "v3.8.0"
 		},
 		"Eunomia" : {
 			"Package" : "Eunomia",
@@ -539,7 +539,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.5.0",
+			"Version" : "3.7.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
