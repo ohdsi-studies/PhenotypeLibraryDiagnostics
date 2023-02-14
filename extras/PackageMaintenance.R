@@ -28,9 +28,9 @@ shell("rm extras/PhenotypeLibraryDiagnostics.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/PhenotypeLibraryDiagnostics.pdf")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::createRenvLockFile(rootPackage = "PhenotypeLibraryDiagnostics",
-                                mode = "description",
-                                ohdsiGitHubPackages = c(OhdsiRTools::getOhdsiGitHubPackages()),
-                                includeRootPackage = TRUE, 
-                                additionalRequiredPackages = c("Eunomia", "testthat"), 
-                                ohdsiStudiesGitHubPackages = c("PhenotypeLibraryDiagnostics"))
+OhdsiRTools::createRenvLockFile(
+  rootPackage = "PhenotypeLibraryDiagnostics",
+  mode = "description",
+  additionalRequiredPackages = c("httr", "ROhdsiWebApi", "keyring"),
+  ohdsiGitHubPackages = OhdsiRTools::getOhdsiGitHubPackages()
+)

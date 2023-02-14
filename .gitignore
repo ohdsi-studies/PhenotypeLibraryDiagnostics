@@ -5,3 +5,5 @@
 *.tmp
 .Rprofile
 errorReportSql.txt
+errorReportR.txt
+log.txt
