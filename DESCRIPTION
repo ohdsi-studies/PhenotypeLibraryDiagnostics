@@ -1,7 +1,7 @@
 Package: PhenotypeLibraryDiagnostics
 Type: Package
 Title: Generating Cohort Diagnostics for the OHDSI Phenotype Library
-Version: 3.11.0
+Version: 3.12.0
 Date: 2023-03-15
 Author: Gowtham Rao [aut, cre]
 Maintainer: Gowtham Rao <rao@ohdsi.org>
@@ -19,7 +19,7 @@ Imports:
   ParallelLogger,
   rlang,
   utils,
-  PhenotypeLibrary (>= 3.11.0)
+  PhenotypeLibrary (>= 3.12.0)
 Suggests:
   Eunomia,
   renv,
