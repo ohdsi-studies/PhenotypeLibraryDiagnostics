@@ -114,7 +114,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
 
   if (!is.null(cohortIds)) {
     cohortDefinitionSet <- cohortDefinitionSet %>%
-      dplyr::filter(cohortId %in% c(cohortIds))
+      dplyr::filter(.data$cohortId %in% c(cohortIds))
   }
 
   # Generate the cohort set

@@ -1,5 +1,4 @@
 # Code to be used  by the package maintainer.
-library(magrittr)
 # Format and check code ---------------------------------------------------------------------
 styler::style_pkg()
 OhdsiRTools::checkUsagePackage("PhenotypeLibraryDiagnostics")
