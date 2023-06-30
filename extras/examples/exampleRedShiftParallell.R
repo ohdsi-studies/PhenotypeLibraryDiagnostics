@@ -36,6 +36,7 @@ databaseIds <-
     'ims_germany',
     'ims_france',
     'iqvia_amb_emr',
+    'premier',
     'iqvia_pharmetrics_plus')
 
 ## service name for keyring for db with cdm
