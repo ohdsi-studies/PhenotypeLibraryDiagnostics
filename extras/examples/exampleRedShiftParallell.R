@@ -35,7 +35,7 @@ databaseIds <-
     'ims_australia_lpd',
     'ims_germany',
     'ims_france',
-    'iqvia_amb_emr',
+    # 'iqvia_amb_emr',
     'premier',
     'iqvia_pharmetrics_plus')
 

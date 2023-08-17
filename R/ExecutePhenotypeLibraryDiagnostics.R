@@ -138,6 +138,99 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     incremental = TRUE
   )
 
+  temporalStartDays <- c(
+    # components displayed in cohort characterization
+    -9999, # anytime prior
+    -365, # long term prior
+    -180, # medium term prior
+    -30, # short term prior
+
+    # components displayed in temporal characterization
+    -365, # one year prior to -31
+    -30, # 30 day prior not including day 0
+    0, # index date only
+    1, # 1 day after to day 30
+    31,
+    -9999 # Any time prior to any time future
+  )
+
+  temporalEndDays <- c(
+    0, # anytime prior
+    0, # long term prior
+    0, # medium term prior
+    0, # short term prior
+
+    # components displayed in temporal characterization
+    -31, # one year prior to -31
+    -1, # 30 day prior not including day 0
+    0, # index date only
+    30, # 1 day after to day 30
+    365,
+    9999 # Any time prior to any time future
+  )
+
+  cohortBasedCovariateSettings <-
+    FeatureExtraction::createCohortBasedTemporalCovariateSettings(
+      analysisId = 150,
+      covariateCohortDatabaseSchema = cohortDatabaseSchema,
+      covariateCohortTable = cohortTableNames$cohortTable,
+      covariateCohorts = cohortDefinitionSet |>
+        dplyr::select(
+          cohortId,
+          cohortName
+        ),
+      valueType = "binary",
+      temporalStartDays = temporalStartDays,
+      temporalEndDays = temporalEndDays
+    )
+
+  featureBasedCovariateSettings <-
+    FeatureExtraction::createTemporalCovariateSettings(
+      useDemographicsGender = TRUE,
+      useDemographicsAge = TRUE,
+      useDemographicsAgeGroup = TRUE,
+      useDemographicsRace = FALSE,
+      useDemographicsEthnicity = FALSE,
+      useDemographicsIndexYear = TRUE,
+      useDemographicsIndexMonth = TRUE,
+      useDemographicsIndexYearMonth = TRUE,
+      useDemographicsPriorObservationTime = TRUE,
+      useDemographicsPostObservationTime = TRUE,
+      useDemographicsTimeInCohort = TRUE,
+      useConditionOccurrence = FALSE,
+      useProcedureOccurrence = FALSE,
+      useDrugEraStart = FALSE,
+      useMeasurement = FALSE,
+      useConditionEraStart = FALSE,
+      useConditionEraOverlap = FALSE,
+      useConditionEraGroupStart = FALSE,
+      # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
+      useConditionEraGroupOverlap = FALSE,
+      useDrugExposure = FALSE,
+      # leads to too many concept id
+      useDrugEraOverlap = FALSE,
+      useDrugEraGroupStart = FALSE,
+      # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
+      useDrugEraGroupOverlap = FALSE,
+      useObservation = FALSE,
+      useVisitCount = FALSE,
+      useVisitConceptCount = FALSE,
+      useDeviceExposure = FALSE,
+      useCharlsonIndex = FALSE,
+      useDcsi = FALSE,
+      useChads2 = FALSE,
+      useChads2Vasc = FALSE,
+      useHfrs = FALSE,
+      temporalStartDays = temporalStartDays,
+      temporalEndDays = temporalEndDays
+    )
+
+  featureExtractionCovariateSettings <-
+    list(
+      cohortBasedCovariateSettings,
+      featureBasedCovariateSettings
+    )
+
   # run cohort diagnostics
   CohortDiagnostics::executeDiagnostics(
     cohortDefinitionSet = cohortDefinitionSet,
@@ -163,70 +256,8 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     runBreakdownIndexEvents = TRUE,
     runIncidenceRate = TRUE,
     runCohortRelationship = FALSE,
-    runTemporalCohortCharacterization = FALSE,
-    temporalCovariateSettings = FeatureExtraction::createTemporalCovariateSettings(
-      useDemographicsGender = TRUE,
-      useDemographicsAge = TRUE,
-      useDemographicsAgeGroup = TRUE,
-      useDemographicsRace = FALSE,
-      useDemographicsEthnicity = FALSE,
-      useDemographicsIndexYear = TRUE,
-      useDemographicsIndexMonth = FALSE,
-      useDemographicsIndexYearMonth = TRUE,
-      useDemographicsPriorObservationTime = TRUE,
-      useDemographicsPostObservationTime = TRUE,
-      useDemographicsTimeInCohort = TRUE,
-      useConditionOccurrence = TRUE,
-      useProcedureOccurrence = TRUE,
-      useDrugEraStart = TRUE,
-      useMeasurement = FALSE,
-      useConditionEraStart = FALSE,
-      useConditionEraOverlap = FALSE,
-      useConditionEraGroupStart = FALSE, # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
-      useConditionEraGroupOverlap = FALSE,
-      useDrugExposure = FALSE, # leads to too many concept id
-      useDrugEraOverlap = FALSE,
-      useDrugEraGroupStart = FALSE, # do not use because https://github.com/OHDSI/FeatureExtraction/issues/144
-      useDrugEraGroupOverlap = TRUE,
-      useObservation = TRUE,
-      useVisitCount = FALSE,
-      useVisitConceptCount = FALSE,
-      useDeviceExposure = FALSE,
-      useCharlsonIndex = FALSE,
-      useDcsi = FALSE,
-      useChads2 = FALSE,
-      useChads2Vasc = FALSE,
-      useHfrs = FALSE,
-      temporalStartDays = c(
-        # components displayed in cohort characterization
-        -9999, # anytime prior
-        -365, # long term prior
-        -180, # medium term prior
-        -30, # short term prior
-
-        # components displayed in temporal characterization
-        -365, # one year prior to -31
-        -30, # 30 day prior not including day 0
-        0, # index date only
-        1, # 1 day after to day 30
-        31,
-        -9999 # Any time prior to any time future
-      ),
-      temporalEndDays = c(
-        0, # anytime prior
-        0, # long term prior
-        0, # medium term prior
-        0, # short term prior
-
-        # components displayed in temporal characterization
-        -31, # one year prior to -31
-        -1, # 30 day prior not including day 0
-        0, # index date only
-        30, # 1 day after to day 30
-        365,
-        9999 # Any time prior to any time future
-      )
-    ),
+    runTemporalCohortCharacterization = TRUE,
+    temporalCovariateSettings = featureExtractionCovariateSettings,
     minCellCount = 5,
     incremental = TRUE,
     incrementalFolder = incrementalFolder

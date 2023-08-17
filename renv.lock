@@ -47,7 +47,7 @@
 		},
 		"vctrs" : {
 			"Package" : "vctrs",
-			"Version" : "0.6.1",
+			"Version" : "0.6.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -83,7 +83,7 @@
 		},
 		"cpp11" : {
 			"Package" : "cpp11",
-			"Version" : "0.4.3",
+			"Version" : "0.4.6",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -161,7 +161,7 @@
 		},
 		"dplyr" : {
 			"Package" : "dplyr",
-			"Version" : "1.1.1",
+			"Version" : "1.1.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -173,13 +173,13 @@
 		},
 		"purrr" : {
 			"Package" : "purrr",
-			"Version" : "1.0.1",
+			"Version" : "1.0.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"Rcpp" : {
 			"Package" : "Rcpp",
-			"Version" : "1.0.10",
+			"Version" : "1.0.11",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -257,19 +257,19 @@
 		},
 		"dbplyr" : {
 			"Package" : "dbplyr",
-			"Version" : "2.3.2",
+			"Version" : "2.3.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"digest" : {
 			"Package" : "digest",
-			"Version" : "0.6.31",
+			"Version" : "0.6.33",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"jsonlite" : {
 			"Package" : "jsonlite",
-			"Version" : "1.8.4",
+			"Version" : "1.8.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -299,7 +299,7 @@
 		},
 		"SqlRender" : {
 			"Package" : "SqlRender",
-			"Version" : "1.14.0",
+			"Version" : "1.15.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -317,7 +317,7 @@
 		},
 		"xml2" : {
 			"Package" : "xml2",
-			"Version" : "1.3.4",
+			"Version" : "1.3.5",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -335,7 +335,7 @@
 		},
 		"DatabaseConnector" : {
 			"Package" : "DatabaseConnector",
-			"Version" : "6.2.0",
+			"Version" : "6.2.3",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -347,7 +347,7 @@
 		},
 		"ParallelLogger" : {
 			"Package" : "ParallelLogger",
-			"Version" : "3.1.0",
+			"Version" : "3.2.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -371,7 +371,7 @@
 		},
 		"remotes" : {
 			"Package" : "remotes",
-			"Version" : "2.4.2",
+			"Version" : "2.4.2.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -389,7 +389,7 @@
 		},
 		"curl" : {
 			"Package" : "curl",
-			"Version" : "5.0.0",
+			"Version" : "5.0.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -401,13 +401,13 @@
 		},
 		"openssl" : {
 			"Package" : "openssl",
-			"Version" : "2.0.6",
+			"Version" : "2.1.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
 		"httr" : {
 			"Package" : "httr",
-			"Version" : "1.4.6",
+			"Version" : "1.4.7",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -497,7 +497,7 @@
 		},
 		"renv" : {
 			"Package" : "renv",
-			"Version" : "0.17.3",
+			"Version" : "1.0.2",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -533,13 +533,13 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "3.2.1",
+			"Version" : "3.2.3",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.2.1"
+			"RemoteRef" : "v3.2.3"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
@@ -553,13 +553,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.13.0",
+			"Version" : "3.16.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.13.0"
+			"RemoteRef" : "v3.16.1"
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
@@ -573,7 +573,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.12.0",
+			"Version" : "3.13.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
