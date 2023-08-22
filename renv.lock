@@ -23,7 +23,7 @@
 		},
 		"rlang" : {
 			"Package" : "rlang",
-			"Version" : "1.1.0",
+			"Version" : "1.1.1",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -503,13 +503,13 @@
 		},
 		"CohortGenerator" : {
 			"Package" : "CohortGenerator",
-			"Version" : "0.8.0",
+			"Version" : "0.9.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortGenerator",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v0.8.0"
+			"RemoteRef" : "v0.9.0"
 		},
 		"FeatureExtraction" : {
 			"Package" : "FeatureExtraction",
@@ -553,13 +553,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.16.1",
+			"Version" : "3.16.2",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.16.1"
+			"RemoteRef" : "v3.16.2"
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
@@ -573,7 +573,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.13.0",
+			"Version" : "3.16.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
