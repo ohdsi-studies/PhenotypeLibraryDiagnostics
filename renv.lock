@@ -347,7 +347,7 @@
 		},
 		"ParallelLogger" : {
 			"Package" : "ParallelLogger",
-			"Version" : "3.2.0",
+			"Version" : "3.3.0",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -553,13 +553,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.16.2",
+			"Version" : "3.17.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.16.2"
+			"RemoteRef" : "v3.17.0"
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
