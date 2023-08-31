@@ -86,28 +86,28 @@ userName <- "study-data-site-pldiag"
 
 # This statement instatiates the cohorts, performs the diagnostics, and writes the results to
 # a zip file containing CSV files. This will probaby take a long time to run:
-runPhenotypeLibraryDiagnostics(connectionDetails = connectionDetails,
-                               cdmDatabaseSchema = cdmDatabaseSchema,
-                               cohortDatabaseSchema = cohortDatabaseSchema,
-                               cohortTable = cohortTable,
-                               oracleTempSchema = oracleTempSchema,
-                               outputFolder = outputFolder,
-                               databaseId = databaseId,
-                               databaseName = databaseName,
-                               databaseDescription = databaseDescription,
-                               createCohorts = TRUE,
-                               runInclusionStatistics = TRUE,
-                               runTimeDistributions = TRUE,
-                               runBreakdownIndexEvents = TRUE,
-                               runIncidenceRates = TRUE,
-                               runCohortOverlap = TRUE,
-                               runCohortCharacterization = TRUE,
-                               runTemporalCohortCharacterization = TRUE,
-                               minCellCount = 5)
+PhenotypeLibraryDiagnostics::executePhenotyeLibraryDiagnostics(
+  connectionDetails = connectionDetails,
+  cdmDatabaseSchema = cdmDatabaseSchema,
+  vocabularyDatabaseSchema = cdmDatabaseSchema,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortTable = cohortTable,
+  oracleTempSchema = oracleTempSchema,
+  verifyDependencies = TRUE,
+  outputFolde = outputFolderr,
+  cohortIds = NULL,
+  incrementalFolder = file.path(outputFolder, "incrementalFolder"),
+  databaseId = databaseId,
+  databaseName = databaseName,
+  databaseDescription = databaseDescription
+)
 
 # (Optionally) to view the results locally:
-CohortDiagnostics::preMergeDiagnosticsFiles(file.path(outputFolder, "diagnosticsExport"))
-CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnosticsExport"))
+CohortDiagnostics::createMergedResultsFile(
+  dataFolder = file.path(outputFolder, "diagnosticsExport"),
+  sqliteDbPath = file.path(outputFolder, "MergedCohortDiagnosticsData.sqlite")
+)
+CohortDiagnostics::launchDiagnosticsExplorer(sqliteDbPath = file.path(outputFolder, "MergedCohortDiagnosticsData.sqlite"))
 
 # *******************************************************
 # SECTION 3: Sharing the results -------------------------------------------------------------------------------
