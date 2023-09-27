@@ -131,6 +131,9 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     cohortDefinitionSet <- cohortDefinitionSet %>%
       dplyr::filter(.data$cohortId %in% c(cohortIds))
   }
+  
+  cohortDefinitionSetForCohortGenerator <- cohortDefinitionSet |>
+    dplyr::filter(!.data$cohortId %in% c(344, 346)) # doctors office visit, and outpatient visit cohorts which are very large cohorts
 
   # Generate the cohort set
   CohortGenerator::generateCohortSet(
@@ -138,7 +141,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     cdmDatabaseSchema = cdmDatabaseSchema,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTableNames = cohortTableNames,
-    cohortDefinitionSet = cohortDefinitionSet,
+    cohortDefinitionSet = cohortDefinitionSetForCohortGenerator,
     incrementalFolder = incrementalFolder,
     incremental = TRUE
   )
@@ -189,8 +192,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       analysisId = 150,
       covariateCohortDatabaseSchema = cohortDatabaseSchema,
       covariateCohortTable = cohortTableNames$cohortTable,
-      covariateCohorts = cohortDefinitionSet |>
-        dplyr::filter(!.data$cohortId %in% c(344, 346)) |> # remove doctors office and outpatient visit cohort because computationally expensive
+      covariateCohorts =   cohortDefinitionSetForCohortGenerator |> 
         dplyr::select(
           .data$cohortId,
           .data$cohortName
@@ -248,12 +250,11 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     )
 
 
-  cohortDefinitionSetForCohortGenerator <- cohortDefinitionSet |>
-    dplyr::filter(!.data$cohortId %in% c(344, 346)) # doctors office visit, and outpatient visit cohorts which are very large cohorts
+  cohortDefinitionSetForCohortDiagnostics <- cohortDefinitionSetForCohortGenerator
 
   # run cohort diagnostics
   CohortDiagnostics::executeDiagnostics(
-    cohortDefinitionSet = cohortDefinitionSetForCohortGenerator, # removes reference cohort and very large Visit cohorts
+    cohortDefinitionSet = cohortDefinitionSetForCohortDiagnostics, # removes reference cohort and very large Visit cohorts
     exportFolder = outputFolder,
     databaseId = databaseId,
     databaseName = databaseName,
