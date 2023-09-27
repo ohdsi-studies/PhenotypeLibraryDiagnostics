@@ -110,7 +110,22 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
   )
 
   # get cohort definitions from study package
-  cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(PhenotypeLibrary::listPhenotypes()$cohortId)
+  phenotypeLog <- PhenotypeLibrary::getPhenotypeLog()
+
+  phenotypeLog <- phenotypeLog |>
+    dplyr::filter(.data$isCirceJson == 1) |>
+    dplyr::filter(stringr::str_detect(
+      string = .data$cohortNameAtlas,
+      pattern = stringr::fixed("[W]"),
+      negate = TRUE
+    )) |>
+    dplyr::filter(stringr::str_detect(
+      string = .data$cohortNameAtlas,
+      pattern = stringr::fixed("[D]"),
+      negate = TRUE
+    ))
+
+  cohortDefinitionSet <- PhenotypeLibrary::getPlCohortDefinitionSet(phenotypeLog$cohortId)
 
   if (!is.null(cohortIds)) {
     cohortDefinitionSet <- cohortDefinitionSet %>%
@@ -175,9 +190,10 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       covariateCohortDatabaseSchema = cohortDatabaseSchema,
       covariateCohortTable = cohortTableNames$cohortTable,
       covariateCohorts = cohortDefinitionSet |>
+        dplyr::filter(!.data$cohortId %in% c(344, 346)) |> # remove doctors office and outpatient visit cohort because computationally expensive
         dplyr::select(
-          cohortId,
-          cohortName
+          .data$cohortId,
+          .data$cohortName
         ),
       valueType = "binary",
       temporalStartDays = temporalStartDays,
@@ -231,9 +247,13 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       featureBasedCovariateSettings
     )
 
+
+  cohortDefinitionSetForCohortGenerator <- cohortDefinitionSet |>
+    dplyr::filter(!.data$cohortId %in% c(344, 346)) # doctors office visit, and outpatient visit cohorts which are very large cohorts
+
   # run cohort diagnostics
   CohortDiagnostics::executeDiagnostics(
-    cohortDefinitionSet = cohortDefinitionSet,
+    cohortDefinitionSet = cohortDefinitionSetForCohortGenerator, # removes reference cohort and very large Visit cohorts
     exportFolder = outputFolder,
     databaseId = databaseId,
     databaseName = databaseName,
@@ -256,7 +276,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     runBreakdownIndexEvents = TRUE,
     runIncidenceRate = TRUE,
     runCohortRelationship = FALSE,
-    runTemporalCohortCharacterization = FALSE,
+    runTemporalCohortCharacterization = TRUE,
     temporalCovariateSettings = featureExtractionCovariateSettings,
     minCellCount = 5,
     incremental = TRUE,
