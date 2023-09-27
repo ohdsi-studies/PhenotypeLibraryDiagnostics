@@ -1,6 +1,6 @@
-for (i in (1:length(y))) {
+for (i in (1:length(x))) {
   cohortTableName <- paste0(stringr::str_squish("pl_"),
-                            stringr::str_squish(x$databaseId))
+                            stringr::str_squish(x[[i]]$databaseId))
   
   # Details for connecting to the server:
   connectionDetails <-
@@ -15,11 +15,10 @@ for (i in (1:length(y))) {
   cohortTableNames <-
     CohortGenerator::getCohortTableNames(cohortTable = cohortTableName)
   
-  CohortGenerator::dropCohortStatsTables(
+  try(CohortGenerator::dropCohortStatsTables(
     connectionDetails = connectionDetails,
-    cohortDatabaseSchema = x[[i]]$cdmSource$cdmDatabaseSchemaFinal,
+    cohortDatabaseSchema = x[[i]]$cdmSource$cohortDatabaseSchemaFinal,
     cohortTableNames = cohortTableNames,
     dropCohortTable = TRUE
-  )
-  
+  ))
 }
