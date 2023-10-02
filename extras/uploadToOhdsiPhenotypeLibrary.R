@@ -184,16 +184,22 @@ listOfZipFilesToUpload2 <-
 # DatabaseConnector::disconnect(connection = connection)
 
 # Maintenance
-connection <-
-  DatabaseConnector::connect(connectionDetails = connectionDetails)
+
 for (i in (1:length(tablesInResultsDataModel))) {
   # vacuum
-  DatabaseConnector::renderTranslateExecuteSql(
+  try(if (DatabaseConnector::existsTable(
     connection = connection,
-    sql = "VACUUM VERBOSE ANALYZE @database_schema.@table_name;",
-    database_schema = resultsSchema,
-    table_name = tablesInResultsDataModel[[i]]
-  )
+    databaseSchema = resultsSchema,
+    tableName = tablesInResultsDataModel[[i]]
+  )) {
+    DatabaseConnector::renderTranslateExecuteSql(
+      connection = connection,
+      sql = "VACUUM VERBOSE ANALYZE @database_schema.@table_name;",
+      database_schema = resultsSchema,
+      table_name = tablesInResultsDataModel[[i]]
+    )
+  })
+  
 }
 
 # CohortDiagnostics::launchDiagnosticsExplorer(connectionDetails = connectionDetails,
