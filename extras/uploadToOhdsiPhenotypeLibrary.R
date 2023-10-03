@@ -101,6 +101,18 @@ for (i in (1:length(tablesInResultsDataModel))) {
 
 CohortDiagnostics::createResultsDataModel(connectionDetails = connectionDetails, databaseSchema = resultsSchema)
 
+# temporary solution for https://github.com/OHDSI/CohortDiagnostics/issues/1081
+modifyIncludedSouceConceptSql <-
+  "ALTER TABLE @results_database_schema.included_source_concept
+    ALTER COLUMN source_concept_id SET DEFAULT 0;
+"
+DatabaseConnector::renderTranslateExecuteSql(
+  connection = DatabaseConnector::connect(connectionDetails = connectionDetails),
+  sql = modifyIncludedSouceConceptSql,
+  results_database_schema = resultsSchema
+)
+
+
 sqlGrant <-
   "grant select on all tables in schema @results_database_schema to phenotypelibrary;"
 DatabaseConnector::renderTranslateExecuteSql(
