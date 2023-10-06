@@ -1,5 +1,5 @@
-install.packages("DatabaseConnector")
-remotes::install_github("ohdsi/CohortDiagnostics")
+# install.packages("DatabaseConnector")
+# remotes::install_github("ohdsi/CohortDiagnostics")
 
 # where are the cohort diagnostics output?
 folderWithZipFilesToUpload <- "D:\\studyResults\\PhenotypeLibraryDiagnostics\\"

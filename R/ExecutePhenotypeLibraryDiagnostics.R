@@ -131,7 +131,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
     cohortDefinitionSet <- cohortDefinitionSet %>%
       dplyr::filter(.data$cohortId %in% c(cohortIds))
   }
-  
+
   cohortDefinitionSetForCohortGenerator <- cohortDefinitionSet |>
     dplyr::filter(!.data$cohortId %in% c(344, 346)) # doctors office visit, and outpatient visit cohorts which are very large cohorts
 
@@ -192,7 +192,7 @@ executePhenotyeLibraryDiagnostics <- function(connectionDetails,
       analysisId = 150,
       covariateCohortDatabaseSchema = cohortDatabaseSchema,
       covariateCohortTable = cohortTableNames$cohortTable,
-      covariateCohorts =   cohortDefinitionSetForCohortGenerator |> 
+      covariateCohorts = cohortDefinitionSetForCohortGenerator |>
         dplyr::select(
           .data$cohortId,
           .data$cohortName
