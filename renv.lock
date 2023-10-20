@@ -553,13 +553,13 @@
 		},
 		"PhenotypeLibrary" : {
 			"Package" : "PhenotypeLibrary",
-			"Version" : "3.25.0",
+			"Version" : "3.30.0",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "PhenotypeLibrary",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v3.25.0"
+			"RemoteRef" : "v3.30.0"
 		},
 		"ROhdsiWebApi" : {
 			"Package" : "ROhdsiWebApi",
@@ -573,7 +573,7 @@
 		},
 		"PhenotypeLibraryDiagnostics" : {
 			"Package" : "PhenotypeLibraryDiagnostics",
-			"Version" : "3.24.0",
+			"Version" : "3.28.1",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
